@@ -5,7 +5,6 @@
     font-family: 'Nunito', sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    background-color: #6a5be2;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -31,7 +30,7 @@ button {
     border: 0;
     padding: 15px 30px;
     font-size: 20px;
-    background-color: darken(#ff006e, 3%);
+    background-color:#ff006e;
     color: #fff;
     margin-top: 20px;
     cursor: pointer;

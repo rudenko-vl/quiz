@@ -1,40 +1,26 @@
 import './Quiz.css';
-// import { questions } from 'helpers/questions';
-
-// function Result() {
-//   return (
-//     <div className="result">
-//       <img src="https://cdn-icons-png.flaticon.com/512/2278/2278992.png" alt='123'/>
-//       <h2>Вы отгадали 3 ответа из 10</h2>
-//       <button>Попробовать снова</button>
-//     </div>
-//   );
-// }
-
-function Game() {
-    return (
-        <>
-            <div className="progress">
-                <div style={{ width: '50%' }} className="progress__inner"></div>
-            </div>
-            <h1>Что такое useState?</h1>
-            <ul>
-                <li>Это функция для хранения данных компонента</li>
-                <li>Это глобальный стейт</li>
-                <li>Это когда ты никому не нужен</li>
-            </ul>
-        </>
-    );
-}
-
+import { useState } from "react";
+import { Result } from "../Result/Result";
+import { Game } from "../Game/Game";
+import { questions } from '../../helpers/questions';
 export function Quiz() {
+    const [step, setStep] = useState(0);
+    const [correct, setCorrect] = useState(0);
+    const question = questions[step];
+    const onCliclVariant = (index) => {
+        setStep(step + 1)
+        if (index === question.correct) { 
+      setCorrect(correct + 1)
+    }
+    };
+   
     return (
         <div className='cont'>
             <div className="box">
-                <Game />
-                {/* <Result /> */}
+                {step !== questions.length ? <Game step={step} question={question} onCliclVariant={onCliclVariant} /> : <Result correct={correct} />
+                }
             </div>
         </div>
     );
-}
+};
 
