@@ -11,7 +11,7 @@ export function Quiz() {
     const [backColor, setBackColor] = useState(false);
     const question = questions[step];
 
-    const onCliclVariant = (index) => {
+    const onClickVariant = (index) => {
         setTimeout(()=> {setStep(step + 1)}, 500)
         if (index === question.correct) { 
       setCorrect(correct + 1)
@@ -23,7 +23,7 @@ export function Quiz() {
     return (
         <div className='cont'>
             <div className="box">
-                {step !== questions.length ? <Game backColor={backColor} step={step} question={question} onCliclVariant={onCliclVariant} /> : <Result correct={correct} />
+                {step !== questions.length ? <Game backColor={backColor} step={step} question={question} onClickVariant={onClickVariant} /> : <Result correct={correct} />
                 }
             </div>
         </div>

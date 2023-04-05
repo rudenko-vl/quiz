@@ -1,11 +1,11 @@
 import { questions } from '../../helpers/questions';
 
-export function Game({ question, onCliclVariant, step, backColor }) {
+export function Game({ question, onClickVariant, step, backColor }) {
     const percentage = Math.round(step / questions.length * 100);
-   const unCorretcStyle = {
+   const unCorrectStyle = {
         backgroundColor: "#ffea66",
     };
-     const corretcStyle = {
+     const correctStyle = {
         backgroundColor: "aqua",
         transform: "scale(1.07)",
     };
@@ -17,7 +17,7 @@ export function Game({ question, onCliclVariant, step, backColor }) {
             <h1>{question.title}</h1>
             <ul>
                 {
-                    question.variants.map((item, index) => <li style={index === question.correct && backColor ? corretcStyle : unCorretcStyle} key={index} onClick={()=> {onCliclVariant(index)}}>{item}</li>)
+                    question.variants.map((item, index) => <li style={index === question.correct && backColor ? correctStyle : unCorrectStyle} key={index} onClick={()=> {onClickVariant(index)}}>{item}</li>)
                 }
             </ul>
         </>
