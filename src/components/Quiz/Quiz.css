@@ -13,13 +13,23 @@
 }
 
 .box {
-    width: 500px;
+    width: 250px;
     border-radius: 30px;
     padding: 40px;
     background-color: #fff;
     position: relative;
 }
 
+@media screen and (min-width: 420px) {
+    .box {
+        width: 350px;
+    }
+}
+@media screen and (min-width: 720px) {
+    .box {
+        width: 550px;
+    }
+}
 .result {
     text-align: center;
 }
@@ -31,7 +41,7 @@ button {
     border: 0;
     padding: 15px 30px;
     font-size: 20px;
-    background-color:#ff006e;
+    background-color: #ff006e;
     color: #fff;
     margin-top: 20px;
     cursor: pointer;
@@ -58,11 +68,9 @@ img {
     width: 80%;
     background: rgb(18, 231, 48);
     transition: all 0.3s ease-in-out;
-    background: linear-gradient(
-            90deg,
+    background: linear-gradient(90deg,
             rgba(18, 231, 48, 1) 0%,
-            rgba(0, 212, 255, 1) 100%
-    );
+            rgba(0, 212, 255, 1) 100%);
 }
 
 .progress:before,
@@ -102,7 +110,7 @@ ul {
 
 li {
     padding: 15px;
-    font-size: 20px;
+    font-size: 14px;
     font-weight: 700;
     text-align: center;
     border: 2px solid rgba(0, 0, 0, 0.1);
@@ -112,17 +120,30 @@ li {
     transition: all 0.1s ease-in-out;
     background-color: rgb(183, 245, 183);
 }
+@media screen and (min-width: 420px) {
+    li {
+        font-size: 20px;
+    }
+}
 
 li:hover {
     border: 2px solid rgba(0, 0, 0, 0.3);
 }
 
 .head-title {
-  font-size: 35px;
-  font-weight: 700;
-  margin: 30px 10px;
-  color: white;
+    font-size: 35px;
+    font-weight: 700;
+    margin: 30px 10px;
+    color: white;
 }
+
 .quest_title {
-text-align: center;
+    text-align: center;
+    font-size: 18px;
+}
+
+@media screen and (min-width: 420px) {
+    .quest_title {
+        font-size: 26px;
+    }
 }
