@@ -6,7 +6,7 @@ export function Result({ correct }) {
   if (correct === questions.length) {
     text = `Ебать ты молодец! ${correct} из ${questions.length}`;
   } else if (correct < 1) {
-    text = `Ты чё, долбоеб? Ни одного правильного ответа))`;
+    text = `Ни одного правильного ответа 😂))`;
   } else {
     text = `Вы отгадали ${correct} ответа из ${questions.length}`;
   }
