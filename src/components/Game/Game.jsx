@@ -11,7 +11,7 @@ export function Game({ question, onClickVariant, step, clicked, clickedId }) {
           className="progress__inner"
         ></div>
       </div>
-      <h1>{question.title}</h1>
+      <h1 className="quest_title">{question.title}</h1>
       <ul>
         {question.variants.map((item, index) => (
           <li
