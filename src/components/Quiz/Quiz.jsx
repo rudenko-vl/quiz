@@ -3,16 +3,9 @@ import { useState } from "react";
 import { Result } from "../Result/Result";
 import { Game } from "../Game/Game";
 import { questions } from '../../helpers/questions';
-
+import { unCorrectStyle, correctStyle } from '../../helpers/styles';
 
 export function Quiz() {
-  const unCorrectStyle = {
-    backgroundColor: "pink"
-  };
-  const correctStyle = {
-    backgroundColor: "aqua",
-    transform: "scale(1.05)"
-  };
 
   const [step, setStep] = useState(0);
   const [correct, setCorrect] = useState(0);
