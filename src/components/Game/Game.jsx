@@ -5,6 +5,7 @@ export function Game({ question, onClickVariant, step, clicked, clickedId }) {
 
   return (
     <>
+      <h1 className="head-title">Тест на знание бурана</h1>
       <div className="progress">
         <div
           style={{ width: `${percentage}%` }}
