@@ -4,7 +4,7 @@ import { questions } from '../../helpers/questions';
 export function Result({ correct }) {
   let text = "";
   if (correct === questions.length) {
-    text = `Ебать ты молодец! ${correct} из ${questions.length}`;
+    text = `Вот это ты молодец! ${correct} из ${questions.length}`;
   } else if (correct < 1) {
     text = `Ни одного правильного ответа 😂))`;
   } else {
