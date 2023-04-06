@@ -1,8 +1,8 @@
 import './App.css';
-import {Quiz} from "./components/Quiz/Quiz";
+import {Main} from "./components/Main/Main";
 
 function App() {
-  return <Quiz/>;
+  return <Main/>;
 };
 
 export default App;

@@ -31,8 +31,6 @@ export function Quiz() {
   };
 
   return (
-    <div className="cont">
-      <h1 className="head-title">Тест на знание бурана</h1>
       <div className="box">
         {step !== questions.length ? (
           <Game
@@ -46,7 +44,6 @@ export function Quiz() {
           <Result correct={correct} />
         )}
       </div>
-    </div>
   );
 }
 
