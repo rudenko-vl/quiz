@@ -12,10 +12,10 @@ export function Quiz() {
     const question = questions[step];
 
     const onClickVariant = (index) => {
+        setBackColor(true)
         setTimeout(()=> {setStep(step + 1)}, 500)
         if (index === question.correct) { 
       setCorrect(correct + 1)
-      setBackColor(true)
     } 
     setTimeout(()=> {setBackColor(false)}, 400)
     };
