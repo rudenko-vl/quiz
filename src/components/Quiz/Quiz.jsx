@@ -8,16 +8,16 @@ import { questions } from '../../helpers/questions';
 export function Quiz() {
     const [step, setStep] = useState(0);
     const [correct, setCorrect] = useState(0);
-    const [backColor, setBackColor] = useState(false);
+    const [backColor, setBackColor] = useState(null);
     const question = questions[step];
 
     const onClickVariant = (index) => {
-        setBackColor(true)
+        setBackColor(index)
         setTimeout(()=> {setStep(step + 1)}, 500)
         if (index === question.correct) { 
       setCorrect(correct + 1)
     } 
-    setTimeout(()=> {setBackColor(false)}, 400)
+    setTimeout(()=> {setBackColor(null)}, 400)
     };
    
     return (

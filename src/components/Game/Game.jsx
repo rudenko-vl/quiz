@@ -17,7 +17,7 @@ export function Game({ question, onClickVariant, step, backColor }) {
             <h1>{question.title}</h1>
             <ul>
                 {
-                    question.variants.map((item, index) => <li style={ backColor ? correctStyle : unCorrectStyle} key={index} onClick={()=> {onClickVariant(index)}}>{item}</li>)
+                    question.variants.map((item, index) => <li style={index === backColor ? correctStyle : unCorrectStyle} key={index} onClick={()=> {onClickVariant(index)}}>{item}</li>)
                 }
             </ul>
         </>
