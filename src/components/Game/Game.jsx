@@ -1,4 +1,4 @@
-import { questions } from '../../helpers/questions';
+import { questions } from "../../helpers/questions";
 
 export function Game({ question, onClickVariant, step, clicked, clickedId }) {
   const percentage = Math.round((step / questions.length) * 100);
@@ -16,7 +16,7 @@ export function Game({ question, onClickVariant, step, clicked, clickedId }) {
         {question.variants.map((item, index) => (
           <li
             style={index === clickedId ? clicked : null}
-            key={index}
+            key={item.id}
             onClick={() => {
               onClickVariant(index);
             }}
