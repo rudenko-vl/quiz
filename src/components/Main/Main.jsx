@@ -4,7 +4,7 @@ export const Main = () => {
   const [start, setStart] = useState(false);
 
   return (
-    <div className="cont">
+    <div className="cont" id="cont">
       <h1 className="head-title">Тест на знание бурана</h1>
       {!start && (
         <button
