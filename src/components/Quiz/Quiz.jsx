@@ -31,18 +31,18 @@ export function Quiz() {
   };
 
   return (
-      <div className="box">
-        {step !== questions.length ? (
-          <Game
-            clicked={clicked}
-            step={step}
-            question={question}
-            onClickVariant={onClickVariant}
-            clickedId={clickedId}
-          />
-        ) : (
-          <Result correct={correct} />
-        )}
-      </div>
+    <div className="box">
+      {step !== questions.length ? (
+        <Game
+          clicked={clicked}
+          step={step}
+          question={question}
+          onClickVariant={onClickVariant}
+          clickedId={clickedId}
+        />
+      ) : (
+        <Result correct={correct} />
+      )}
+    </div>
   );
 }

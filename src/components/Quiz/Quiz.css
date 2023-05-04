@@ -9,7 +9,7 @@
     align-items: center;
     flex-direction: column;
     justify-content: center;
-    height: 77vh;
+    /* height: 77vh; */
 }
 
 .box {
@@ -25,13 +25,11 @@
         width: 350px;
     }
 }
+
 @media screen and (min-width: 720px) {
     .box {
         width: 550px;
     }
-}
-.result {
-    text-align: center;
 }
 
 button {
@@ -43,7 +41,7 @@ button {
     font-size: 20px;
     background-color: #ff006e;
     color: #fff;
-    margin-top: 20px;
+    /* margin-top: 20px; */
     cursor: pointer;
 }
 
@@ -120,6 +118,7 @@ li {
     transition: all 0.1s ease-in-out;
     background-color: rgb(183, 245, 183);
 }
+
 @media screen and (min-width: 420px) {
     li {
         font-size: 20px;
@@ -136,11 +135,13 @@ li:hover {
     margin: 30px 10px;
     color: white;
 }
+
 @media screen and (min-width: 420px) {
     .head-title {
         font-size: 35px;
     }
 }
+
 .quest_title {
     text-align: center;
     font-size: 18px;
@@ -150,4 +151,33 @@ li:hover {
     .quest_title {
         font-size: 26px;
     }
+}
+
+.btnWrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    margin-bottom: 60px;
+}
+
+.btn {
+    background-color: #43cd2f;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    z-index: 100;
+}
+
+.btn2 {
+    position: absolute;
+    left: 55%;
+    top: -5px;
+    ;
+}
+
+
+.result {
+    height: 100%;
+    position: relative;
+    text-align: center;
 }

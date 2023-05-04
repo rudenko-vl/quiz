@@ -14,9 +14,8 @@ export function Game({ question, onClickVariant, step, clicked, clickedId }) {
       <h1 className="quest_title">{question.title}</h1>
       <ul>
         {question.variants.map((item, index) => (
-          <li
+          < li key={index}
             style={index === clickedId ? clicked : null}
-            key={item.id}
             onClick={() => {
               onClickVariant(index);
             }}
@@ -24,7 +23,7 @@ export function Game({ question, onClickVariant, step, clicked, clickedId }) {
             {item}
           </li>
         ))}
-      </ul>
+      </ul >
     </>
   );
 }
