@@ -11,7 +11,7 @@ export function Result({ correct }) {
     const containerRect = container.getBoundingClientRect();
     const buttonRect = button.getBoundingClientRect();
     const x = Math.floor(Math.random() * (containerRect.width - buttonRect.width));
-    const y = Math.floor(Math.random() * (containerRect.height - buttonRect.height));
+    const y = Math.floor(Math.random() * ((containerRect.height - 100) - buttonRect.height));
     setPosition({ x, y });
   };
 
@@ -37,7 +37,7 @@ export function Result({ correct }) {
       />
       <h2>{text}</h2>
       <h2>По результатам теста, Ваша зарплата будет увеличена на {!correct ? '0' : correct + '0'}%</h2>
-      <h2 style={{ marginBottom: "25px" }}>Вы согласны?</h2>
+      <h2 style={{ marginBottom: "25px", color: 'blue', fontWeight: "700" }}>Вы согласны?</h2>
       <div className='btnWrapper'>
         <button className='btn' id='randomButton' style={{ left: `${position.x}px`, top: `${position.y}px` }} onClick={handleClick} onMouseOver={handleClick}>Да</button>
         <button className="btn2" onClick={handlerNoBtn}>Нет</button>
